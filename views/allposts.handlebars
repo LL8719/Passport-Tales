@@ -1,0 +1,40 @@
+<!-- Add comments to existing post -->
+<div class="post-page">
+  <h2 class="allposts-title">{{title}}</h2>
+  <h3 class="allposts-author">Posted By {{user.username}} on {{format_date date_created}}</h3>
+  <p>{{content}}</p>
+</div>
+<div class="col-md-12 post-list">
+  <form class="form existing-post-form" data-id="{{id}}">
+    <div class="form-group">
+      <label for="post-comment">Comment</label>
+      <textarea class="form-input" id="post-comment" name="post-comment" placeholder="Enter your comment here!"></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary form-save" data-id="{{id}}">Submit</button>
+    </div>
+  </form>
+
+
+
+  <a href="/share?postTitle={{title}}&postContent={{content}}"><button>Share</button></a>
+
+</div>
+</div>
+
+<div>
+  {{#if comments.length}}
+  <div class="all-comments">
+    <label>Comments:</label>
+    {{#each comments as |comment|}}
+    <div class="comment">
+      <h4 class="comment-user">{{comment.user.username}} {{format_date comment.date_created}}</h4>
+      <p class="comment-text">{{comment_text}}</p>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+
+<script src="/js/allposts.js"></script>

@@ -1,0 +1,16 @@
+<div>
+  {{!-- Mailer addon --}}
+    
+  <form method="post" action="/share-post">
+      <input type="hidden" name="postTitle" value="{{title}}">
+    <input type="hidden" name="postContent" value="{{content}}">
+    
+    <h3>{{title}}</h3>
+    <p>{{content}}</p>
+    
+    <label for="userEmail">Email:</label>
+    <input type="email" name="userEmail" required>
+    <button class="btn btn-primary share-post" data-post="{{id}}">Share</button>
+  </form>
+    
+</div>

@@ -1,0 +1,51 @@
+<!-- Filter results -->
+<div class="homepage">
+  <div>
+    <input type="text" id="byLocation" name="byLocation" placeholder="Search by City">
+  </div>
+  <div class="type-search">
+    <div class="pet">
+      <input type="checkbox" id="petFriendly" name="petFriendly">
+      <label for="petFriendly">🐕‍🦺</label><br>
+    </div>
+    <div class="family">
+      <input type="checkbox" id="familyFriendly" name="familyFriendly">
+      <label for="familyFriendly">👶</label><br>
+    </div>
+    <button type="click" class="btn btn-primary filter-group">Search!</button>
+  </div>
+</div>
+<!-- Loop over each object in the posts array -->
+{{#each posts as |post| }}
+<div class="post">
+  <div>
+    <h2>
+      <a class="post-link" href="/allposts/{{post.id}}">{{title}}</a>
+    </h2>
+    <p class="post-author">Posted by {{user.username}} on {{format_date date_created}}</p>
+  </div>
+  <div>
+  <p class="post-location">{{location}}</p>
+    <p class="post-content">
+      {{content}}
+    </p>
+  </div>
+  <div>
+  <img src={{image}}></img>
+  </div>
+  <div class="likes-group">
+    <button type="click" like-value=1 data-id={{id}}>👍{{Liked.length}}</button>
+    <button type="click" like-value=-1 data-id={{id}}>👎{{Disliked.length}}</button>
+
+
+  </div>
+
+
+</div>
+
+  <div>
+ <a class="share" href="/share?postTitle={{title}}&postContent={{content}}"><button>Share</button></a>
+</div>
+{{/each}}
+
+<script src="/js/homepage.js"></script>
