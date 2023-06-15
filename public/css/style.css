@@ -7,21 +7,18 @@
 
 /* Style for header */
 header {
-  background-color: #2315eb;
+  background-color: #113f67;
   padding: 30px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
+  border-radius: 10px;
 }
 
 .header-link {
   text-decoration: none;
-  color: gold;
+  color: #ffc93c;
   font-size: 36pt;
-}
-
-.header-link:hover {
-  color: rgb(59, 34, 34)
 }
 
 /* Style for navigation bar */
@@ -37,110 +34,47 @@ nav {
   text-decoration: none;
 }
 
-
-
 /* Style for logout button */
 #logout {
-  padding: 0 25px 0 25px;
+  padding: 10px 25px;
   text-align: center;
-}
-
-/* homepage */
-
-img {
-  max-width: 350px;
-  max-height: 350px;
-}
-
-.post {
-  margin: 0;
+  background-color: #ffc93c;
+  color: #113f67;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   font-size: 16pt;
+  transition: all 0.3s ease;
 }
 
-.post-link {
-  text-decoration: underline;
-  color: darkblue;
-  margin: 0;
+button{
+  padding: 5px 14px;
+  border-radius: 5px;
 }
 
-.post-link:hover {
-  color: rgb(90, 11, 155);
-  background-color: lightblue;
+#logout:hover {
+  background-color: #ffa500;
+  color: #fff;
 }
 
-.post-author {
-  margin: 0;
-  font-weight: bold;
-  font-size: 14pt;
-}
-
-.post-location {
-  margin: 0;
-}
-
-.post-content {
-  margin: 0;
-  font-size: 12pt;
-}
-
-.type-search {
-  display: flex;
-  flex-direction: row;
-}
-
-.pet {
-  display: flex;
-  flex-direction: row;
-}
-
-.family {
-  display: flex;
-  flex-direction: row;
-}
-
-.all-comments {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5px;
-}
-
-.comment {
-  border: 1px solid lightblue;
-  margin: 5px;
-  padding: 5px 0 0 5px;
-  width: auto;
-}
-
-.comment-user {
-  border-bottom: 1px dashed lightblue;
-  margin-bottom: 5px;
-}
-
-.comment-text {
-  padding: 0;
-  margin: 5px;
-}
-
-.homepage {
-  margin: 10px 10px 0 10px;
-}
-
-.login-page {
-  margin: 10px 10px 0 10px;
-}
-
-.dashboard-page {
-  margin-top: 10px;
-}
-
-.post-page {
-  margin: 10px;
-}
-
-main {
+/* Style for main content */
+.container {
   margin: 20px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
 }
 
+/* Style for footer */
+footer {
+  background-color: #113f67;
+  padding: 20px;
+  text-align: center;
+  color: #ffc93c;
+  border-radius: 10px;
+}
+
+/* Responsive Styles */
 
 @media screen and (max-width: 900px) {
   header {
@@ -152,8 +86,6 @@ main {
     flex-wrap: wrap;
     justify-content: right;
   }
-
-
 }
 
 @media screen and (max-width: 412px) {
@@ -181,7 +113,7 @@ main {
   .post-link {
     font-size: 20pt;
   }
-    
+  
   .post-author {
     font-size: 14pt;
   }
@@ -189,7 +121,6 @@ main {
   .post-content {
     font-size: 12pt;
   }
-
 }
 
 @media screen and (max-width: 280px) {
@@ -220,7 +151,7 @@ main {
   .post-link {
     font-size: 16pt;
   }
-    
+  
   .post-author {
     font-size: 12pt;
   }
