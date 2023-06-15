@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Poppins';
 }
 
 /* Style for header */
@@ -15,10 +16,13 @@ header {
   border-radius: 10px;
 }
 
+
+
 .header-link {
   text-decoration: none;
   color: #ffc93c;
-  font-size: 36pt;
+  font-size: 40pt;
+  font-family: "Caveat";
 }
 
 /* Style for navigation bar */
@@ -32,6 +36,10 @@ nav {
   display: flex;
   flex-direction: row;
   text-decoration: none;
+}
+
+a.nav-link {
+  font-family: 'Poppins';
 }
 
 /* Style for logout button */
@@ -48,6 +56,7 @@ nav {
 }
 
 button{
+  
   padding: 5px 14px;
   border-radius: 5px;
 }
@@ -64,6 +73,17 @@ button{
   padding: 20px;
   border-radius: 10px;
 }
+
+p.post-content {
+  font-size: x-large;
+  padding-top: 20px;
+}
+
+.post {
+  padding-top: 74px;
+}
+
+
 
 /* Style for footer */
 footer {
